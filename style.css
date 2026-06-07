@@ -1,3 +1,6 @@
+/* Direct stylesheet injection backup to bypass browser security filters */
+@import url('https://googleapis.com');
+
 /* Global Reset and Base Rules */
 * {
     margin: 0;
@@ -8,7 +11,7 @@ body {
     color: #1c2431;
     line-height: 1.6;
     background-color: #f7f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 a {
     text-decoration: none;
@@ -17,7 +20,7 @@ a {
 
 /* Header Elements & Navigation Layout */
 header {
-    background-color: #050b14; /* Solid matching dark tone */
+    background-color: #08111e;
     color: #ffffff;
     position: sticky;
     top: 0;
@@ -30,12 +33,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px;
 }
-.nav-logo-img {
-    height: 45px; /* Clean, compact menu height */
-    width: auto;
-    object-fit: contain;
+.nav-logo-text {
+    font-family: 'Orbitron', 'Eurostile', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
 }
 nav ul {
     display: flex;
@@ -53,10 +59,9 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* Hero Frame matching your inverted logo background color */
+/* Hero Frame with Anchored Town Clock Image */
 .hero {
-    /* Rich solid black overlay perfectly blends the non-transparent logo box into the town clock image */
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85)), url('halifaxbg1.jpg') no-repeat center center;
+    background: linear-gradient(rgba(8, 17, 30, 0.75), rgba(8, 17, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
@@ -69,23 +74,52 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Centers and formats the logo image */
-.hero-logo-img {
-    max-width: 520px; 
-    width: 90%;
-    height: auto;
-    margin-bottom: 25px;
+/* Branding Content Block Container */
+.brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-/* "HVAC & REFRIGERATION" subtitle */
-.hero-subheading {
+/* "REFCO" Wide Geometric Slanted Font Styling */
+.brand-container .logo-main-text {
+    font-family: 'Orbitron', 'Eurostile', sans-serif;
+    font-size: 92px;
+    font-weight: 900;
+    font-style: italic; /* Signature logo slant */
+    letter-spacing: -2px; /* Snug tracking fit */
+    color: #ffffff;
+    line-height: 1;
+    transform: scaleX(1.3); /* Forces the text to stretch horizontally like Eurostile Extended */
+    transform-origin: center;
+}
+
+/* "MECHANICAL INC" Wide Layout Alignment Line */
+.brand-container .logo-mechanical-text {
+    font-family: 'Orbitron', 'Eurostile', sans-serif;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 4px;
+    color: #ffffff;
+    line-height: 1;
+    margin-top: 15px;
+    transform: scaleX(1.15); /* Controlled horizontal expansion */
+    transform-origin: center;
+}
+
+/* "HVAC & REFRIGERATION" subtitle and white rule line */
+.hero-subheading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff;
+    border-top: 3px solid #ffffff; /* Divider line running beneath company name */
     padding-top: 15px;
     display: inline-block;
     width: 100%;
@@ -126,6 +160,7 @@ nav ul li a:hover {
     text-align: center;
 }
 .services h2 {
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     margin-bottom: 50px;
     color: #08111e;
@@ -151,6 +186,7 @@ nav ul li a:hover {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .service-card h3 {
+    font-family: 'Oswald', sans-serif;
     font-size: 22px;
     margin-bottom: 15px;
     color: #08111e;
@@ -159,7 +195,7 @@ nav ul li a:hover {
 
 /* Base Footer Configurations */
 footer {
-    background-color: #050b14;
+    background-color: #08111e;
     color: #ffffff;
     padding: 60px 20px 30px 20px;
     text-align: center;
@@ -168,9 +204,11 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.footer-logo-img {
-    height: 45px;
-    width: auto;
+.footer-logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 .footer-info p {
@@ -179,11 +217,12 @@ footer {
     color: #b0bec5;
 }
 .phone-link {
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
     font-size: 34px;
     color: #ffffff;
     margin: 20px 0;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
