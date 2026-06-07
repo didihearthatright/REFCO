@@ -1,11 +1,3 @@
-/* FORCE SECURE LOCAL FONT LOADING IMMUNE TO SECURITY FILTERS */
-@font-face {
-    font-family: 'LocalOrbitron';
-    src: url('orbitron.woff2') format('woff2');
-    font-weight: 900;
-    font-style: italic;
-}
-
 /* Global Reset and Base Rules */
 * {
     margin: 0;
@@ -40,14 +32,6 @@ header {
     align-items: center;
     padding: 20px;
 }
-.nav-logo-text {
-    font-family: 'LocalOrbitron', sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 900;
-    color: #ffffff;
-    letter-spacing: -1px;
-}
 nav ul {
     display: flex;
     list-style: none;
@@ -79,56 +63,25 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Branding Content Block Container */
-.brand-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
+/* Vector Branding Layout Box */
+.vector-brand-wrapper {
+    max-width: 640px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-/* "REFCO" Wide Geometric Slanted Font Styling */
-.brand-container .logo-main-text {
-    font-family: 'LocalOrbitron', sans-serif;
-    font-size: 92px;
-    font-weight: 900;
-    font-style: italic; 
-    letter-spacing: -2px; 
-    color: #ffffff;
-    line-height: 1;
-    transform: scaleX(1.3); 
-    transform-origin: center;
-}
-
-/* "MECHANICAL INC" Wide Layout Alignment Line */
-.brand-container .logo-mechanical-text {
-    font-family: 'LocalOrbitron', sans-serif;
-    font-size: 26px;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 4px;
-    color: #ffffff;
-    line-height: 1;
-    margin-top: 15px;
-    transform: scaleX(1.15); 
-    transform-origin: center;
-}
-
-/* "HVAC & REFRIGERATION" subtitle and white rule line */
+/* "HVAC & REFRIGERATION" subtitle */
 .hero-subheading {
-    font-family: 'Segoe UI', sans-serif;
     font-size: 26px;
     font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; 
-    padding-top: 15px;
-    display: inline-block;
     width: 100%;
     max-width: 650px;
+    border-top: 3px solid #ffffff;
+    padding-top: 20px;
 }
 
 .justified-lead {
@@ -285,13 +238,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.footer-logo-text {
-    font-family: 'LocalOrbitron', sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
 .footer-info p {
     margin: 8px 0;
     font-size: 18px;
@@ -319,12 +265,12 @@ footer {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-    .brand-container .logo-main-text {
-        font-size: 54px; 
+    .hero {
+        min-height: 75vh;
+        padding: 20px 15px;
     }
-    .brand-container .logo-mechanical-text {
-        font-size: 18px;
-        margin-top: 8px;
+    .vector-brand-wrapper {
+        max-width: 320px; 
     }
     .hero-subheading {
         font-size: 18px;
