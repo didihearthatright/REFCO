@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
+    <title>REFCO Mechanical Inc | HVAC, Refrigeration & Mechanical Services</title>
+    
+    <!-- LOCAL SEO DATA ARCHITECTURE (Hidden indexing tags for Google search ranking) -->
+    <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
+    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia, Heating and Cooling Bedford, Atlantic Canada Mechanical Contractor">
+    
     <!-- Links to external stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- Multiple secure network bridges to ensure the wide font file loads -->
+    
+    <!-- Secure Google Fonts Connection -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Orbitron:wght@900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -30,7 +36,7 @@
     <!-- Main Hero Presentation -->
     <section id="home" class="hero">
         
-        <!-- Pure Text Branding Structure matching the logo graphics -->
+        <!-- Pure Text Branding Structure (Responsive & Secure) -->
         <div class="brand-container">
             <div class="logo-main-text">REFCO</div>
             <div class="logo-mechanical-text">MECHANICAL INC</div>
@@ -38,26 +44,66 @@
         
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
         
-        <p class="justified-lead">Commercial & residential mechanical solutions built on reliability and expert performance.</p>
+        <!-- Framed text targeting both local authority and regional scale capacity -->
+        <p class="justified-lead">Commercial & residential mechanical solutions serving HRM and executing regional projects at scale across Atlantic Canada.</p>
         <a href="tel:9028807483" class="btn">Call 902-880-7483</a>
     </section>
 
     <!-- Core Specialties Block -->
     <section id="services" class="services">
-        <h2>Our Core Specialties</h2>
+        <div class="section-header">
+            <h2>Our Core Specialties</h2>
+            <p class="section-subtitle">Delivering elite local response times and managing high-capacity regional operations.</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Heating & Cooling</h3>
-                <p>Complete installation, rapid diagnostics, and preventative care packages for HVAC systems.</p>
+                <p>Complete commercial HVAC installation, rapid emergency diagnostics, and custom preventative care packages designed for institutional systems.</p>
             </div>
             <div class="service-card">
                 <h3>Refrigeration</h3>
-                <p>Commercial walk-in coolers, industrial freezers, and cold storage maintenance setup.</p>
+                <p>Industrial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling system setups.</p>
             </div>
             <div class="service-card">
                 <h3>Mechanical Services</h3>
-                <p>Heavy duty piping systems, equipment ventilation, and efficient mechanical operations.</p>
+                <p>High-pressure mechanical piping systems, industrial equipment ventilation, custom plant retrofits, and large-scale mechanical design operations.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Interactive Lead Capture Frame -->
+    <section class="form-section">
+        <div class="form-container">
+            <h3>Request an Estimate or Project Consult</h3>
+            <p>Fill out the details below to connect directly with our dispatch team.</p>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry received! This form is fully stylized and ready to link to your GoDaddy processing server.');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="(902) 555-5555">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="scope">Project Scope / Location</label>
+                    <select id="scope">
+                        <option value="local">Local Service Call (Halifax / HRM)</option>
+                        <option value="regional">Regional Tender / Large-Scale Commercial Contract</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / System Issues</label>
+                    <textarea id="message" rows="4" required placeholder="Describe your mechanical installation or repair requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
         </div>
     </section>
 
@@ -66,7 +112,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-logo-text">REFCO</div>
-                <p>Serving your mechanical needs with premium local response times.</p>
+                <p>Serving Halifax, Dartmouth, Bedford, and executing regional projects across Atlantic Canada.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
             </div>
