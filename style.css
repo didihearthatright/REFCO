@@ -1,5 +1,10 @@
-/* Direct stylesheet injection backup to bypass browser security filters */
-@import url('https://googleapis.com');
+/* FORCE SECURE LOCAL FONT LOADING IMMUNE TO SECURITY FILTERS */
+@font-face {
+    font-family: 'LocalOrbitron';
+    src: url('orbitron.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
 
 /* Global Reset and Base Rules */
 * {
@@ -36,7 +41,7 @@ header {
     padding: 20px;
 }
 .nav-logo-text {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'LocalOrbitron', sans-serif;
     font-size: 24px;
     font-style: italic;
     font-weight: 900;
@@ -85,7 +90,7 @@ nav ul li a:hover {
 
 /* "REFCO" Wide Geometric Slanted Font Styling */
 .brand-container .logo-main-text {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'LocalOrbitron', sans-serif;
     font-size: 92px;
     font-weight: 900;
     font-style: italic; 
@@ -98,7 +103,7 @@ nav ul li a:hover {
 
 /* "MECHANICAL INC" Wide Layout Alignment Line */
 .brand-container .logo-mechanical-text {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'LocalOrbitron', sans-serif;
     font-size: 26px;
     font-weight: 900;
     font-style: italic;
@@ -112,9 +117,9 @@ nav ul li a:hover {
 
 /* "HVAC & REFRIGERATION" subtitle and white rule line */
 .hero-subheading {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -163,7 +168,6 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 .services h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: #08111e;
     text-transform: uppercase;
@@ -193,7 +197,6 @@ nav ul li a:hover {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .service-card h3 {
-    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     margin-bottom: 15px;
     color: #08111e;
@@ -214,7 +217,6 @@ nav ul li a:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .form-container h3 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     color: #08111e;
     text-transform: uppercase;
@@ -284,7 +286,7 @@ footer {
     margin: 0 auto;
 }
 .footer-logo-text {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'LocalOrbitron', sans-serif;
     font-size: 24px;
     font-style: italic;
     color: #ffffff;
@@ -296,12 +298,11 @@ footer {
     color: #b0bec5;
 }
 .phone-link {
-    font-family: 'Oswald', sans-serif;
     display: inline-block;
     font-size: 34px;
     color: #ffffff;
     margin: 20px 0;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
@@ -316,10 +317,10 @@ footer {
     padding-top: 20px;
 }
 
-/* RESPONSIVE MEDIA QUERIES (Slowing down to anticipate and protect mobile views) */
+/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
     .brand-container .logo-main-text {
-        font-size: 54px; /* Automatically downsizes on phone screens to prevent spillover */
+        font-size: 54px; 
     }
     .brand-container .logo-mechanical-text {
         font-size: 18px;
