@@ -30,12 +30,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px;
 }
-.nav-logo-img {
-    height: 45px; /* Clean, compact menu height */
-    width: auto;
-    object-fit: contain;
+.nav-logo-text {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: #ffffff; /* Pure White text logo */
+    transform: scaleX(1.1);
 }
 nav ul {
     display: flex;
@@ -67,17 +71,25 @@ nav ul li a:hover {
     text-align: center;
     padding: 40px 20px;
 }
-.hero-logo-img {
-    max-width: 480px; /* Force major presence centered in frame */
-    width: 90%;
-    height: auto;
-    margin-bottom: 5px;
+
+/* "REFCO" Text logo in pure white, replacing the image file footprint */
+.hero-logo-text-brand {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 84px; /* Scaled to perfectly replicate previous image impact */
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -4px;
+    color: #ffffff; /* Pure White text */
+    text-transform: uppercase;
+    transform: scaleX(1.25); /* Ultra-wide stretched geometry */
+    margin-bottom: 15px;
+    line-height: 1;
 }
 
 /* "MECHANICAL INC" styled to match original font format and layout position */
 .hero-brand-extension {
     font-family: 'Syncopate', sans-serif;
-    font-size: 38px; /* Original top heading scale */
+    font-size: 38px;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 2px;
@@ -90,7 +102,7 @@ nav ul li a:hover {
 /* "HVAC & REFRIGERATION" dropped down and reduced by 30% */
 .hero-subheading {
     font-family: 'Oswald', sans-serif;
-    font-size: 26.6px; /* Reduced 30% from the previous 38px size */
+    font-size: 26.6px;
     font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -106,11 +118,11 @@ nav ul li a:hover {
 .justified-lead {
     font-size: 21px;
     margin-bottom: 40px;
-    max-width: 620px; /* Constrains boundaries for perfectly clean 2-line structure */
+    max-width: 620px;
     font-weight: 300;
     color: #cfd8dc;
-    text-align: justify; /* Aligns edges evenly to discard orphans */
-    text-align-last: center; /* Centers remaining text baseline flawlessly */
+    text-align: justify;
+    text-align-last: center;
 }
 .btn {
     display: inline-block;
@@ -181,9 +193,12 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.footer-logo-img {
-    height: 40px;
-    width: auto;
+.footer-logo-text {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 .footer-info p {
