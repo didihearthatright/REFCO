@@ -1,0 +1,213 @@
+/* Global Reset and Base Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    color: #1c2431;
+    line-height: 1.6;
+    background-color: #f7f9fa;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Elements & Navigation Layout */
+header {
+    background-color: #08111e; /* Deep navy tone matching logo dark area */
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.nav-logo-img {
+    height: 45px; /* Clean, compact menu height */
+    width: auto;
+    object-fit: contain;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #00bcd4; /* Accent color on cursor hover */
+}
+
+/* Hero Frame with Anchored Town Clock Image */
+.hero {
+    background: linear-gradient(rgba(8, 17, 30, 0.75), rgba(8, 17, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps image locked in position while text passes over */
+    color: #ffffff;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.hero-logo-img {
+    max-width: 480px; /* Force major presence centered in frame */
+    width: 90%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* "MECHANICAL INC" styled to match original font format and layout position */
+.hero-brand-extension {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 38px; /* Original top heading scale */
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+    transform: scaleX(1.1);
+}
+
+/* "HVAC & REFRIGERATION" dropped down and reduced by 30% */
+.hero-subheading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26.6px; /* Reduced 30% from the previous 38px size */
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #ffffff;
+    border-top: 3px solid #ffffff; /* Divider line running beneath company name elements */
+    padding-top: 15px;
+    display: inline-block;
+    width: 100%;
+    max-width: 650px;
+}
+
+.justified-lead {
+    font-size: 21px;
+    margin-bottom: 40px;
+    max-width: 620px; /* Constrains boundaries for perfectly clean 2-line structure */
+    font-weight: 300;
+    color: #cfd8dc;
+    text-align: justify; /* Aligns edges evenly to discard orphans */
+    text-align-last: center; /* Centers remaining text baseline flawlessly */
+}
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #08111e;
+    padding: 14px 35px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.btn:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Specialties Presentation Frame */
+.services {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+.services h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #08111e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.service-card {
+    background: #ffffff;
+    padding: 50px 30px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #08111e;
+    transition: all 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #00bcd4;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.service-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #08111e;
+    text-transform: uppercase;
+}
+
+/* Base Footer Configurations */
+footer {
+    background-color: #08111e;
+    color: #ffffff;
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 15px;
+}
+.footer-info p {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #b0bec5;
+}
+.phone-link {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    color: #ffffff;
+    margin: 20px 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.phone-link:hover {
+    color: #00bcd4;
+}
+.copy-tag {
+    font-size: 14px;
+    color: #546e7a;
+    margin-top: 40px;
+    border-top: 1px solid #1c2a38;
+    padding-top: 20px;
+}
