@@ -3,12 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     color: #1c2431;
     line-height: 1.6;
     background-color: #f7f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 a {
     text-decoration: none;
@@ -33,13 +33,13 @@ header {
     padding: 20px;
 }
 .nav-logo-text {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 26px;
     font-style: italic;
-    letter-spacing: -1px;
-    color: #ffffff; /* Pure White text logo */
-    transform: scaleX(1.1);
+    font-stretch: ultra-expanded;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 nav ul {
     display: flex;
@@ -49,6 +49,7 @@ nav ul li {
     margin-left: 25px;
 }
 nav ul li a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 600;
     font-size: 16px;
     transition: color 0.3s;
@@ -72,43 +73,45 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* "REFCO" Text logo in pure white, replacing the image file footprint */
+/* "REFCO" Forced wide-stretched geometric text layout completely immune to browser security blocks */
 .hero-logo-text-brand {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 84px; /* Scaled to perfectly replicate previous image impact */
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: -4px;
-    color: #ffffff; /* Pure White text */
+    font-family: "Impact", "Arial Black", "Arial", sans-serif;
+    font-size: 96px; /* Scaled perfectly for major branding weight */
+    font-style: italic; /* Forces the signature brand slant */
+    font-weight: 900;
+    letter-spacing: 2px; /* Pulls wide geometric tracking balances */
+    color: #ffffff;
     text-transform: uppercase;
-    transform: scaleX(1.25); /* Ultra-wide stretched geometry */
-    margin-bottom: 15px;
+    transform: scaleX(1.4); /* Physically stretches the text wider to match the logo proportions */
+    transform-origin: center;
+    margin-bottom: 5px;
     line-height: 1;
 }
 
-/* "MECHANICAL INC" styled to match original font format and layout position */
+/* "MECHANICAL INC" Forced matching slant and geometric weight stretching below the logo baseline */
 .hero-brand-extension {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
+    font-family: "Impact", "Arial Black", "Arial", sans-serif;
+    font-size: 34px;
     font-style: italic;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 8px;
-    transform: scaleX(1.1);
+    margin-bottom: 12px;
+    transform: scaleX(1.15); /* Slightly less horizontal stretch to maintain reading line crispness */
+    transform-origin: center;
 }
 
-/* "HVAC & REFRIGERATION" dropped down and reduced by 30% */
+/* "HVAC & REFRIGERATION" clean, geometric sub-headline layout */
 .hero-subheading {
-    font-family: 'Oswald', sans-serif;
-    font-size: 26.6px;
-    font-weight: 400;
-    letter-spacing: 4px;
+    font-family: "Arial Black", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; /* Divider line running beneath company name elements */
+    border-top: 3px solid #ffffff; /* Clear accent boundary separator rule line */
     padding-top: 15px;
     display: inline-block;
     width: 100%;
@@ -116,6 +119,7 @@ nav ul li a:hover {
 }
 
 .justified-lead {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 21px;
     margin-bottom: 40px;
     max-width: 620px;
@@ -125,6 +129,7 @@ nav ul li a:hover {
     text-align-last: center;
 }
 .btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     display: inline-block;
     background-color: #ffffff;
     color: #08111e;
@@ -149,8 +154,8 @@ nav ul li a:hover {
     text-align: center;
 }
 .services h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
+    font-family: "Arial Black", "Arial", sans-serif;
+    font-size: 36px;
     margin-bottom: 50px;
     color: #08111e;
     text-transform: uppercase;
@@ -175,11 +180,14 @@ nav ul li a:hover {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .service-card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 26px;
+    font-family: "Arial Black", "Arial", sans-serif;
+    font-size: 22px;
     margin-bottom: 15px;
     color: #08111e;
     text-transform: uppercase;
+}
+.service-card p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Base Footer Configurations */
@@ -194,25 +202,26 @@ footer {
     margin: 0 auto;
 }
 .footer-logo-text {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 28px;
     font-style: italic;
     color: #ffffff;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 .footer-info p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     margin: 8px 0;
     font-size: 18px;
     color: #b0bec5;
 }
 .phone-link {
+    font-family: "Arial Black", "Arial", sans-serif;
     display: inline-block;
-    font-family: 'Oswald', sans-serif;
-    font-size: 38px;
+    font-size: 34px;
     color: #ffffff;
     margin: 20px 0;
-    font-weight: 500;
+    font-weight: 900;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
@@ -220,6 +229,7 @@ footer {
     color: #00bcd4;
 }
 .copy-tag {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 14px;
     color: #546e7a;
     margin-top: 40px;
