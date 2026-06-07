@@ -36,7 +36,7 @@ header {
     padding: 20px;
 }
 .nav-logo-text {
-    font-family: 'Orbitron', 'Eurostile', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 24px;
     font-style: italic;
     font-weight: 900;
@@ -85,20 +85,20 @@ nav ul li a:hover {
 
 /* "REFCO" Wide Geometric Slanted Font Styling */
 .brand-container .logo-main-text {
-    font-family: 'Orbitron', 'Eurostile', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 92px;
     font-weight: 900;
-    font-style: italic; /* Signature logo slant */
-    letter-spacing: -2px; /* Snug tracking fit */
+    font-style: italic; 
+    letter-spacing: -2px; 
     color: #ffffff;
     line-height: 1;
-    transform: scaleX(1.3); /* Forces the text to stretch horizontally like Eurostile Extended */
+    transform: scaleX(1.3); 
     transform-origin: center;
 }
 
 /* "MECHANICAL INC" Wide Layout Alignment Line */
 .brand-container .logo-mechanical-text {
-    font-family: 'Orbitron', 'Eurostile', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 26px;
     font-weight: 900;
     font-style: italic;
@@ -106,7 +106,7 @@ nav ul li a:hover {
     color: #ffffff;
     line-height: 1;
     margin-top: 15px;
-    transform: scaleX(1.15); /* Controlled horizontal expansion */
+    transform: scaleX(1.15); 
     transform-origin: center;
 }
 
@@ -119,7 +119,7 @@ nav ul li a:hover {
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; /* Divider line running beneath company name */
+    border-top: 3px solid #ffffff; 
     padding-top: 15px;
     display: inline-block;
     width: 100%;
@@ -155,17 +155,24 @@ nav ul li a:hover {
 /* Specialties Presentation Frame */
 .services {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 80px auto 40px auto;
     padding: 0 20px;
+}
+.section-header {
     text-align: center;
+    margin-bottom: 50px;
 }
 .services h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
-    margin-bottom: 50px;
     color: #08111e;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+.section-subtitle {
+    font-size: 18px;
+    color: #546e7a;
+    margin-top: 5px;
 }
 .services-grid {
     display: grid;
@@ -187,10 +194,82 @@ nav ul li a:hover {
 }
 .service-card h3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 15px;
     color: #08111e;
     text-transform: uppercase;
+}
+
+/* Interactive Quote Request Form Frame */
+.form-section {
+    background-color: #f0f4f8;
+    padding: 80px 20px;
+}
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.form-container h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    color: #08111e;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.form-container p {
+    color: #546e7a;
+    margin-bottom: 25px;
+}
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #08111e;
+    font-size: 14px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    padding: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #1c2431;
+    background-color: #fafbfc;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+    background-color: #ffffff;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #08111e;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.submit-btn:hover {
+    background-color: #00bcd4;
 }
 
 /* Base Footer Configurations */
@@ -235,4 +314,29 @@ footer {
     margin-top: 40px;
     border-top: 1px solid #1c2a38;
     padding-top: 20px;
+}
+
+/* RESPONSIVE MEDIA QUERIES (Slowing down to anticipate and protect mobile views) */
+@media (max-width: 768px) {
+    .brand-container .logo-main-text {
+        font-size: 54px; /* Automatically downsizes on phone screens to prevent spillover */
+    }
+    .brand-container .logo-mechanical-text {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+    .hero-subheading {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+    .justified-lead {
+        font-size: 18px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-container {
+        padding: 25px;
+    }
 }
