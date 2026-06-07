@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFCO Mechanical Inc | HVAC, Refrigeration & Mechanical Services</title>
     
-    <!-- LOCAL SEO DATA ARCHITECTURE (Hidden indexing tags for Google search ranking) -->
+    <!-- LOCAL SEO DATA ARCHITECTURE -->
     <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
-    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia, Heating and Cooling Bedford, Atlantic Canada Mechanical Contractor">
+    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia">
     
-    <!-- Links to external stylesheet -->
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Secure Google Fonts Connection -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Orbitron:wght@900&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header & Navigation Bar -->
     <header>
         <div class="nav-container">
-            <div class="nav-logo-text">REFCO</div>
+            <!-- Vector Based Nav Logo -->
+            <svg viewBox="0 0 160 40" width="120" height="30" style="overflow: visible;">
+                <text x="0" y="30" font-family="sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#ffffff" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
+            </svg>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -36,15 +34,26 @@
     <!-- Main Hero Presentation -->
     <section id="home" class="hero">
         
-        <!-- Pure Text Branding Structure (Responsive & Secure) -->
-        <div class="brand-container">
-            <div class="logo-main-text">REFCO</div>
-            <div class="logo-mechanical-text">MECHANICAL INC</div>
+        <!-- THE BULLETPROOF VECTOR LOGO FRAME (No images, no external fonts, perfectly wide) -->
+        <div class="vector-brand-wrapper">
+            <svg viewBox="0 0 800 210" width="100%" height="100%" style="overflow: visible;">
+                <!-- "REFCO" - Forced ultra-wide and heavy via vector geometry -->
+                <text x="50%" y="90" font-family="sans-serif" font-size="105" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="760" lengthAdjust="spacingAndGlyphs">REFCO</text>
+                
+                <!-- Center Accent Divider Line -->
+                <line x1="20" y1="120" x2="780" y2="120" stroke="#ffffff" stroke-width="5" />
+                
+                <!-- "MECHANICAL INC" - Proportional geometric baseline width -->
+                <text x="50%" y="165" font-family="sans-serif" font-size="36" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="720" lengthAdjust="spacingAndGlyphs">MECHANICAL INC</text>
+                
+                <!-- Bottom Framing Detail Marks -->
+                <line x1="260" y1="195" x2="360" y2="195" stroke="#ffffff" stroke-width="3" />
+                <line x1="440" y1="195" x2="540" y2="195" stroke="#ffffff" stroke-width="3" />
+            </svg>
         </div>
         
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
         
-        <!-- Framed text targeting both local authority and regional scale capacity -->
         <p class="justified-lead">Commercial & residential mechanical solutions serving HRM and executing regional projects at scale across Atlantic Canada.</p>
         <a href="tel:9028807483" class="btn">Call 902-880-7483</a>
     </section>
@@ -76,7 +85,7 @@
         <div class="form-container">
             <h3>Request an Estimate or Project Consult</h3>
             <p>Fill out the details below to connect directly with our dispatch team.</p>
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry received! This form is fully stylized and ready to link to your GoDaddy processing server.');">
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry received! This form is fully stylized and ready.');">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -111,7 +120,9 @@
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
-                <div class="footer-logo-text">REFCO</div>
+                <svg viewBox="0 0 160 40" width="120" height="30" style="overflow: visible; margin-bottom: 15px;">
+                    <text x="50%" y="30" font-family="sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
+                </svg>
                 <p>Serving Halifax, Dartmouth, Bedford, and executing regional projects across Atlantic Canada.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
