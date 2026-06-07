@@ -6,14 +6,17 @@
     <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
     <!-- Links to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Multiple secure network bridges to ensure the wide font file loads -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@900&family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header & Navigation Bar -->
     <header>
         <div class="nav-container">
-            <!-- Points to the exact same main logo asset -->
-            <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="nav-logo-img">
+            <div class="nav-logo-text">REFCO</div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -26,8 +29,12 @@
 
     <!-- Main Hero Presentation -->
     <section id="home" class="hero">
-        <!-- Main Logo centered here -->
-        <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="hero-logo-img">
+        
+        <!-- Pure Text Branding Structure matching the logo graphics -->
+        <div class="brand-container">
+            <div class="logo-main-text">REFCO</div>
+            <div class="logo-mechanical-text">MECHANICAL INC</div>
+        </div>
         
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
         
@@ -58,7 +65,7 @@
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
-                <img src="logo.png" alt="REFCO Mechanical Inc" class="footer-logo-img">
+                <div class="footer-logo-text">REFCO</div>
                 <p>Serving your mechanical needs with premium local response times.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
