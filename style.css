@@ -1,3 +1,6 @@
+/* Backup font injection layer directly within the stylesheet */
+@import url('https://googleapis.com');
+
 /* Global Reset and Base Rules */
 * {
     margin: 0;
@@ -32,6 +35,14 @@ header {
     align-items: center;
     padding: 20px;
 }
+.nav-logo-text {
+    font-family: 'Michroma', 'Syncopate', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
 nav ul {
     display: flex;
     list-style: none;
@@ -63,25 +74,56 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Vector Branding Layout Box */
-.vector-brand-wrapper {
-    max-width: 640px;
-    width: 100%;
-    margin-bottom: 20px;
+/* Branding Content Block Container */
+.brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-/* "HVAC & REFRIGERATION" subtitle */
+/* "REFCO" - Structured with the square, ultra-wide Eurostile geometry */
+.brand-container .logo-main-text {
+    font-family: 'Michroma', 'Syncopate', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    font-style: italic; /* Signature brand slant */
+    letter-spacing: -3px; /* Professional snug tracking fit */
+    color: #ffffff;
+    line-height: 1;
+    transform: scaleX(1.15); /* Gives it that extra wide horizontal corporate stretch */
+    transform-origin: center;
+}
+
+/* "MECHANICAL INC" - Matching sub-line geometry layout */
+.brand-container .logo-mechanical-text {
+    font-family: 'Michroma', 'Syncopate', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: #ffffff;
+    line-height: 1;
+    margin-top: 15px;
+    transform: scaleX(1.05); 
+    transform-origin: center;
+}
+
+/* "HVAC & REFRIGERATION" clean modern subtitle layout */
 .hero-subheading {
+    font-family: 'Oswald', sans-serif;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
+    border-top: 3px solid #ffffff; /* Crisp white line directly below company name elements */
+    padding-top: 15px;
+    display: inline-block;
     width: 100%;
     max-width: 650px;
-    border-top: 3px solid #ffffff;
-    padding-top: 20px;
 }
 
 .justified-lead {
@@ -121,6 +163,7 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 .services h2 {
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: #08111e;
     text-transform: uppercase;
@@ -150,6 +193,7 @@ nav ul li a:hover {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .service-card h3 {
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     margin-bottom: 15px;
     color: #08111e;
@@ -170,6 +214,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .form-container h3 {
+    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     color: #08111e;
     text-transform: uppercase;
@@ -238,12 +283,20 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+.footer-logo-text {
+    font-family: 'Michroma', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
 .footer-info p {
     margin: 8px 0;
     font-size: 18px;
     color: #b0bec5;
 }
 .phone-link {
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
     font-size: 34px;
     color: #ffffff;
@@ -265,12 +318,12 @@ footer {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-    .hero {
-        min-height: 75vh;
-        padding: 20px 15px;
+    .brand-container .logo-main-text {
+        font-size: 48px; 
     }
-    .vector-brand-wrapper {
-        max-width: 320px; 
+    .brand-container .logo-mechanical-text {
+        font-size: 16px;
+        margin-top: 8px;
     }
     .hero-subheading {
         font-size: 18px;
