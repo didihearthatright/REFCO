@@ -32,11 +32,9 @@ header {
     align-items: center;
     padding: 15px 20px;
 }
-.nav-logo-img {
+.header-placeholder-space {
+    width: 40px;
     height: 40px;
-    width: auto;
-    object-fit: contain;
-    mix-blend-mode: screen; /* Blends out dark menu box lines */
 }
 nav ul {
     display: flex;
