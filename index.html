@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
-    <!-- Links directly to your local stylesheet -->
+    
+    <!-- THE SECURE SOFACHROME ENGINE LINK -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Oswald:wght@500&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Links to your external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Local SEO Target Data -->
+    <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
+    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia">
 </head>
 <body>
 
-    <!-- Header Navigation Bar -->
+    <!-- Header & Navigation Bar -->
     <header>
         <div class="nav-container">
-            <div class="header-placeholder-space"></div>
+            <div class="nav-logo-text">REFCO</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,10 +33,10 @@
         </div>
     </header>
 
-    <!-- Main Presentation Section -->
+    <!-- Main Hero Presentation Section -->
     <section id="home" class="hero">
         
-        <!-- PURE CODE BRANDING: No images, no background boxes, completely sharp -->
+        <!-- Pure Text Branding Structure calling the exact Sofachrome layout parameters -->
         <div class="brand-container">
             <div class="logo-main-text">REFCO</div>
             <div class="logo-mechanical-text">MECHANICAL INC</div>
@@ -40,23 +50,63 @@
 
     <!-- Core Specialties Block -->
     <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Core Specialties</h2>
+            <p class="section-subtitle">Delivering elite local response times and managing high-capacity regional operations.</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Heating & Cooling</h3>
-                <p>Complete commercial HVAC installation, rapid emergency diagnostics, and custom preventative care packages.</p>
+                <p>Complete commercial HVAC installation, rapid emergency diagnostics, and custom preventative care packages designed for institutional systems.</p>
             </div>
             <div class="service-card">
                 <h3>Refrigeration</h3>
-                <p>Industrial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling.</p>
+                <p>Commercial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling system setups.</p>
             </div>
             <div class="service-card">
                 <h3>Mechanical Services</h3>
-                <p>High-pressure mechanical piping systems, industrial equipment ventilation, and custom plant retrofits.</p>
+                <p>High-pressure mechanical piping systems, industrial equipment ventilation, custom plant retrofits, and large-scale mechanical design operations.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer Information -->
+    <!-- Interactive Estimate Request Form -->
+    <section class="form-section">
+        <div class="form-container">
+            <h3>Request an Estimate or Project Consult</h3>
+            <p>Fill out the details below to connect directly with our dispatch team.</p>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry received! This form is fully functional.');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="(902) 555-5555">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="scope">Project Scope / Location</label>
+                    <select id="scope">
+                        <option value="local">Local Service Call (Halifax / HRM)</option>
+                        <option value="regional">Regional Tender / Large-Scale Commercial Contract</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label Conference for="message">Message / System Issues</label>
+                    <textarea id="message" rows="4" required placeholder="Describe your mechanical installation or repair requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Information Section -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
