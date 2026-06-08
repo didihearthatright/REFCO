@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
-    <!-- Links to your local style sheet sitting in the same folder -->
+    <!-- Links to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Local SEO Tags -->
+    <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
+    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia">
 </head>
 <body>
 
     <!-- Header & Navigation Bar -->
     <header>
         <div class="nav-container">
-            <!-- Pulls your new transparent logo cleanly into the menu bar -->
             <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="nav-logo-img">
             <nav>
                 <ul>
@@ -24,12 +26,15 @@
         </div>
     </header>
 
-    <!-- Main Presentation Hero Section -->
+    <!-- Main Hero Presentation Frame -->
     <section id="home" class="hero">
         
-        <!-- Your brand-new transparent logo image centered here -->
-        <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="hero-logo-img">
+        <!-- Main Logo Wrapper with programmatic background filtering -->
+        <div class="logo-blend-wrapper">
+            <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="hero-logo-img">
+        </div>
         
+        <!-- Clean, streamlined headings with duplicates removed -->
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
         
         <p class="justified-lead">Commercial & residential mechanical solutions serving HRM and executing regional projects at scale across Atlantic Canada.</p>
@@ -49,7 +54,7 @@
             </div>
             <div class="service-card">
                 <h3>Refrigeration</h3>
-                <p>Commercial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy-duty process cooling system setups.</p>
+                <p>Industrial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling system setups.</p>
             </div>
             <div class="service-card">
                 <h3>Mechanical Services</h3>
@@ -58,7 +63,7 @@
         </div>
     </section>
 
-    <!-- Interactive Estimate Consultation Request Form -->
+    <!-- Interactive Lead Capture Frame -->
     <section class="form-section">
         <div class="form-container">
             <h3>Request an Estimate or Project Consult</h3>
@@ -87,19 +92,20 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message / System Issues</label>
-                    <textarea id="message" rows="4" required placeholder="Describe your mechanical requirements..."></textarea>
+                    <textarea id="message" rows="4" required placeholder="Describe your mechanical installation or repair requirements..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit Request</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer Area -->
+    <!-- Footer Information -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
-                <!-- Small branding logo in the footer section -->
-                <img src="logo.png" alt="REFCO Mechanical Inc" class="footer-logo-img">
+                <div class="footer-logo-blend">
+                    <img src="logo.png" alt="REFCO Mechanical Inc" class="footer-logo-img">
+                </div>
                 <p>Serving Halifax, Dartmouth, Bedford, and executing regional projects across Atlantic Canada.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
