@@ -1,3 +1,6 @@
+/* Direct font injection to bypass local machine restrictions */
+@import url('https://googleapis.com');
+
 /* Global Reset and Base Rules */
 * {
     margin: 0;
@@ -30,11 +33,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px;
 }
-.header-placeholder-space {
-    width: 40px;
-    height: 40px;
+.nav-logo-text {
+    font-family: 'Rowdies', Arial, sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    color: #ffffff;
+    transform: scaleX(1.3);
+    transform-origin: left center;
 }
 nav ul {
     display: flex;
@@ -66,51 +74,52 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Text Branding Layout Elements Container */
+/* Branding Content Block Container */
 .brand-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* "REFCO" Stretched Text Geometry to replicate Eurostile Extended layout footprint */
+/* "REFCO" - Physically forced into the flat, ultra-wide Sofachrome racing geometry */
 .brand-container .logo-main-text {
-    font-family: 'Arial Black', Impact, sans-serif;
+    font-family: 'Rowdies', 'Arial Black', sans-serif;
     font-size: 92px;
-    font-weight: 900;
-    font-style: italic; /* Matches signature slant */
-    letter-spacing: -2px; /* Snug tracking fit */
+    font-weight: 700;
+    font-style: italic; /* Signature forward slant */
+    letter-spacing: -2px; /* Tight corporate tracking fit */
     color: #ffffff;
-    line-height: 1;
-    transform: scaleX(1.35); /* Forces text characters to stretch horizontally sideways */
+    line-height: 0.9;
+    transform: scaleX(1.65); /* Expands character lines sideways to hit the wide footprint */
     transform-origin: center;
 }
 
-/* "MECHANICAL INC" Matching Base Geometry Line */
+/* "MECHANICAL INC" - Matching sub-line geometry layout */
 .brand-container .logo-mechanical-text {
-    font-family: 'Arial Black', Impact, sans-serif;
+    font-family: 'Rowdies', 'Arial Black', sans-serif;
     font-size: 26px;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     color: #ffffff;
     line-height: 1;
-    margin-top: 15px;
-    transform: scaleX(1.15);
+    margin-top: 25px;
+    transform: scaleX(1.25);
     transform-origin: center;
 }
 
-/* "HVAC & REFRIGERATION" subtitle */
+/* "HVAC & REFRIGERATION" subtitle and white rule line */
 .hero-subheading {
+    font-family: 'Oswald', sans-serif;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; 
+    border-top: 3px solid #ffffff; /* Divider border line below logo framework */
     padding-top: 15px;
     display: inline-block;
     width: 100%;
@@ -149,6 +158,22 @@ nav ul li a:hover {
     margin: 80px auto 40px auto;
     padding: 0 20px;
 }
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.services h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    color: #08111e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-subtitle {
+    font-size: 18px;
+    color: #546e7a;
+    margin-top: 5px;
+}
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -161,13 +186,89 @@ nav ul li a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border-bottom: 4px solid #08111e;
     transition: all 0.3s;
-    color: #1c2431;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #00bcd4;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 .service-card h3 {
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     margin-bottom: 15px;
     color: #08111e;
     text-transform: uppercase;
+}
+
+/* Interactive Request Form Frame */
+.form-section {
+    background-color: #f0f4f8;
+    padding: 80px 20px;
+}
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.form-container h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    color: #08111e;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.form-container p {
+    color: #546e7a;
+    margin-bottom: 25px;
+}
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #08111e;
+    font-size: 14px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    padding: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #1c2431;
+    background-color: #fafbfc;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+    background-color: #ffffff;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #08111e;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.submit-btn:hover {
+    background-color: #00bcd4;
 }
 
 /* Base Footer Configurations */
@@ -182,11 +283,12 @@ footer {
     margin: 0 auto;
 }
 .footer-logo-text {
-    font-family: 'Arial Black', sans-serif;
+    font-family: 'Rowdies', sans-serif;
     font-size: 24px;
     font-style: italic;
     color: #ffffff;
     margin-bottom: 15px;
+    transform: scaleX(1.3);
 }
 .footer-info p {
     margin: 8px 0;
@@ -194,11 +296,12 @@ footer {
     color: #b0bec5;
 }
 .phone-link {
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
     font-size: 34px;
     color: #ffffff;
     margin: 20px 0;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
@@ -213,10 +316,13 @@ footer {
     padding-top: 20px;
 }
 
+/* RESPONSIVE MEDIA BREAKPOINTS */
 @media (max-width: 768px) {
     .hero { min-height: 75vh; padding: 20px 15px; }
-    .brand-container .logo-main-text { font-size: 54px; }
-    .brand-container .logo-mechanical-text { font-size: 18px; margin-top: 8px; }
+    .brand-container .logo-main-text { font-size: 44px; }
+    .brand-container .logo-mechanical-text { font-size: 14px; margin-top: 8px; }
     .hero-subheading { font-size: 18px; letter-spacing: 3px; }
     .justified-lead { font-size: 18px; }
+    .form-row { flex-direction: column; gap: 0; }
+    .form-container { padding: 25px; }
 }
