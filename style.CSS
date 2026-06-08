@@ -66,21 +66,13 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Programmatic Vector Blend Wrapper Layer */
-.logo-blend-wrapper {
+/* Formats and scales your transparent logo image cleanly over the clock face */
+.hero-logo-img {
     max-width: 520px;
     width: 90%;
-    margin-bottom: 25px;
-    background-color: transparent;
-}
-
-/* CRITICAL CONTRAST ACCELERATION FILTER: Strips gray noise to force absolute transparency */
-.hero-logo-img {
-    width: 100%;
     height: auto;
+    margin-bottom: 25px;
     object-fit: contain;
-    mix-blend-mode: screen; 
-    filter: contrast(200%) brightness(120%); /* Flattens dark noise textures completely into clear channels */
 }
 
 /* "HVAC & REFRIGERATION" subtitle */
@@ -251,17 +243,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.footer-logo-blend {
-    height: 40px;
-    margin-bottom: 15px;
-}
-.footer-logo-img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    mix-blend-mode: screen;
-    filter: contrast(200%) brightness(120%);
-}
 .footer-info p {
     margin: 8px 0;
     font-size: 18px;
@@ -289,7 +270,7 @@ footer {
 
 @media (max-width: 768px) {
     .hero { min-height: 75vh; padding: 20px 15px; }
-    .logo-blend-wrapper { max-width: 320px; }
+    .hero-logo-img { max-width: 320px; }
     .hero-subheading { font-size: 18px; letter-spacing: 3px; }
     .justified-lead { font-size: 18px; }
     .form-row { flex-direction: column; gap: 0; }
