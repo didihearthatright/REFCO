@@ -30,11 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-}
-.header-placeholder-space {
-    width: 40px;
-    height: 40px;
+    padding: 20px;
 }
 nav ul {
     display: flex;
@@ -66,16 +62,14 @@ nav ul li a:hover {
     padding: 40px 20px;
 }
 
-/* Formats and scales your transparent logo image cleanly over the clock face */
-.hero-logo-img {
-    max-width: 520px;
-    width: 90%;
-    height: auto;
-    margin-bottom: 25px;
-    object-fit: contain;
+/* Vector Branding Layout Box */
+.vector-brand-wrapper {
+    max-width: 640px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-/* "HVAC & REFRIGERATION" subtitle */
+/* "HVAC & REFRIGERATION" clean modern subtitle layout */
 .hero-subheading {
     font-size: 26px;
     font-weight: 600;
@@ -83,11 +77,10 @@ nav ul li a:hover {
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; 
-    padding-top: 15px;
-    display: inline-block;
     width: 100%;
     max-width: 650px;
+    border-top: 3px solid #ffffff;
+    padding-top: 20px;
 }
 
 .justified-lead {
@@ -162,7 +155,7 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
-/* Interactive Request Form Frame */
+/* Interactive Quote Request Form Frame */
 .form-section {
     background-color: #f0f4f8;
     padding: 80px 20px;
@@ -268,11 +261,27 @@ footer {
     padding-top: 20px;
 }
 
+/* RESPONSIVE SMARTPHONE ADAPTATIONS */
 @media (max-width: 768px) {
-    .hero { min-height: 75vh; padding: 20px 15px; }
-    .hero-logo-img { max-width: 320px; }
-    .hero-subheading { font-size: 18px; letter-spacing: 3px; }
-    .justified-lead { font-size: 18px; }
-    .form-row { flex-direction: column; gap: 0; }
-    .form-container { padding: 25px; }
+    .hero {
+        min-height: 75vh;
+        padding: 20px 15px;
+    }
+    .vector-brand-wrapper {
+        max-width: 320px; 
+    }
+    .hero-subheading {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+    .justified-lead {
+        font-size: 18px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-container {
+        padding: 25px;
+    }
 }
