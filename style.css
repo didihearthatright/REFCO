@@ -1,342 +1,62 @@
-/* Backup font injection layer directly within the stylesheet */
-@import url('https://googleapis.com');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { color: #1c2431; line-height: 1.6; background-color: #f7f9fa; font-family: 'Segoe UI', -apple-system, sans-serif; }
+a { text-decoration: none; color: inherit; }
 
-/* Global Reset and Base Rules */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    color: #1c2431;
-    line-height: 1.6;
-    background-color: #f7f9fa;
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
+header { background-color: #08111e; color: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
 
-/* Header Elements & Navigation Layout */
-header {
-    background-color: #08111e;
-    color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-.nav-logo-text {
-    font-family: 'Michroma', 'Syncopate', sans-serif;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 900;
-    color: #ffffff;
-    letter-spacing: -1px;
-}
-nav ul {
-    display: flex;
-    list-style: none;
-}
-nav ul li {
-    margin-left: 25px;
-}
-nav ul li a {
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #00bcd4;
-}
+/* Scales the navigation logo cleanly into the header menu */
+.nav-logo-img { height: 45px; width: auto; object-fit: contain; }
 
-/* Hero Frame with Anchored Town Clock Image */
-.hero {
-    background: linear-gradient(rgba(8, 17, 30, 0.75), rgba(8, 17, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #ffffff;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-}
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { font-weight: 600; font-size: 16px; transition: color 0.3s; }
+nav ul li a:hover { color: #00bcd4; }
 
-/* Branding Content Block Container */
-.brand-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
+.hero { background: linear-gradient(rgba(8, 17, 30, 0.75), rgba(8, 17, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center/cover; background-attachment: fixed; color: #ffffff; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; }
 
-/* "REFCO" - Structured with the square, ultra-wide Eurostile geometry */
-.brand-container .logo-main-text {
-    font-family: 'Michroma', 'Syncopate', sans-serif;
-    font-size: 80px;
-    font-weight: 900;
-    font-style: italic; /* Signature brand slant */
-    letter-spacing: -3px; /* Professional snug tracking fit */
-    color: #ffffff;
-    line-height: 1;
-    transform: scaleX(1.15); /* Gives it that extra wide horizontal corporate stretch */
-    transform-origin: center;
-}
+/* Center framing and scaling dimensions for the large banner logo image */
+.hero-logo-img { max-width: 520px; width: 90%; height: auto; margin-bottom: 25px; object-fit: contain; }
 
-/* "MECHANICAL INC" - Matching sub-line geometry layout */
-.brand-container .logo-mechanical-text {
-    font-family: 'Michroma', 'Syncopate', sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 3px;
-    color: #ffffff;
-    line-height: 1;
-    margin-top: 15px;
-    transform: scaleX(1.05); 
-    transform-origin: center;
-}
+.hero-subheading { font-size: 26px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; color: #ffffff; width: 100%; max-width: 650px; border-top: 3px solid #ffffff; padding-top: 20px; }
+.justified-lead { font-size: 21px; margin-bottom: 40px; max-width: 620px; font-weight: 300; color: #cfd8dc; text-align: justify; text-align-last: center; }
+.btn { display: inline-block; background-color: #ffffff; color: #08111e; padding: 14px 35px; border-radius: 4px; font-weight: bold; font-size: 20px; transition: all 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn:hover { background-color: #00bcd4; color: #ffffff; transform: translateY(-2px); }
 
-/* "HVAC & REFRIGERATION" clean modern subtitle layout */
-.hero-subheading {
-    font-family: 'Oswald', sans-serif;
-    font-size: 26px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    color: #ffffff;
-    border-top: 3px solid #ffffff; /* Crisp white line directly below company name elements */
-    padding-top: 15px;
-    display: inline-block;
-    width: 100%;
-    max-width: 650px;
-}
+.services { max-width: 1200px; margin: 80px auto 40px auto; padding: 0 20px; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.services h2 { font-size: 36px; color: #08111e; text-transform: uppercase; letter-spacing: 1px; }
+.section-subtitle { font-size: 18px; color: #546e7a; margin-top: 5px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.service-card { background: #ffffff; padding: 50px 30px; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 4px solid #08111e; transition: all 0.3s; }
+.service-card:hover { transform: translateY(-8px); border-bottom-color: #00bcd4; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+.service-card h3 { font-size: 24px; margin-bottom: 15px; color: #08111e; text-transform: uppercase; }
 
-.justified-lead {
-    font-size: 21px;
-    margin-bottom: 40px;
-    max-width: 620px;
-    font-weight: 300;
-    color: #cfd8dc;
-    text-align: justify;
-    text-align-last: center;
-}
-.btn {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #08111e;
-    padding: 14px 35px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 20px;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.btn:hover {
-    background-color: #00bcd4;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
+.form-section { background-color: #f0f4f8; padding: 80px 20px; }
+.form-container { max-width: 700px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.form-container h3 { font-size: 28px; color: #08111e; text-transform: uppercase; margin-bottom: 5px; }
+.form-container p { color: #546e7a; margin-bottom: 25px; }
+.form-row { display: flex; gap: 20px; }
+.form-group { flex: 1; display: flex; flex-direction: column; margin-bottom: 20px; }
+.form-group label { font-weight: 600; margin-bottom: 6px; color: #08111e; font-size: 14px; }
+.form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid #cfd8dc; border-radius: 4px; font-size: 16px; color: #1c2431; background-color: #fafbfc; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #00bcd4; background-color: #ffffff; }
+.submit-btn { width: 100%; background-color: #08111e; color: #ffffff; padding: 14px; border: none; border-radius: 4px; font-size: 18px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+.submit-btn:hover { background-color: #00bcd4; }
 
-/* Specialties Presentation Frame */
-.services {
-    max-width: 1200px;
-    margin: 80px auto 40px auto;
-    padding: 0 20px;
-}
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.services h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 36px;
-    color: #08111e;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #546e7a;
-    margin-top: 5px;
-}
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-.service-card {
-    background: #ffffff;
-    padding: 50px 30px;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-bottom: 4px solid #08111e;
-    transition: all 0.3s;
-}
-.service-card:hover {
-    transform: translateY(-8px);
-    border-bottom-color: #00bcd4;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-.service-card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #08111e;
-    text-transform: uppercase;
-}
+footer { background-color: #08111e; color: #ffffff; padding: 60px 20px 30px 20px; text-align: center; }
+.footer-container { max-width: 1200px; margin: 0 auto; }
+.footer-logo-img { height: 45px; width: auto; margin-bottom: 15px; object-fit: contain; }
+.footer-info p { margin: 8px 0; font-size: 18px; color: #b0bec5; }
+.phone-link { display: inline-block; font-size: 34px; color: #ffffff; margin: 20px 0; font-weight: 700; letter-spacing: 1px; transition: color 0.3s; }
+.phone-link:hover { color: #00bcd4; }
+.copy-tag { font-size: 14px; color: #546e7a; margin-top: 40px; border-top: 1px solid #1c2a38; padding-top: 20px; }
 
-/* Interactive Quote Request Form Frame */
-.form-section {
-    background-color: #f0f4f8;
-    padding: 80px 20px;
-}
-.form-container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-.form-container h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 28px;
-    color: #08111e;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-.form-container p {
-    color: #546e7a;
-    margin-bottom: 25px;
-}
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #08111e;
-    font-size: 14px;
-}
-.form-group input, .form-group select, .form-group textarea {
-    padding: 12px;
-    border: 1px solid #cfd8dc;
-    border-radius: 4px;
-    font-size: 16px;
-    font-family: inherit;
-    color: #1c2431;
-    background-color: #fafbfc;
-}
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #00bcd4;
-    background-color: #ffffff;
-}
-.submit-btn {
-    width: 100%;
-    background-color: #08111e;
-    color: #ffffff;
-    padding: 14px;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.submit-btn:hover {
-    background-color: #00bcd4;
-}
-
-/* Base Footer Configurations */
-footer {
-    background-color: #08111e;
-    color: #ffffff;
-    padding: 60px 20px 30px 20px;
-    text-align: center;
-}
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.footer-logo-text {
-    font-family: 'Michroma', sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-.footer-info p {
-    margin: 8px 0;
-    font-size: 18px;
-    color: #b0bec5;
-}
-.phone-link {
-    font-family: 'Oswald', sans-serif;
-    display: inline-block;
-    font-size: 34px;
-    color: #ffffff;
-    margin: 20px 0;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-.phone-link:hover {
-    color: #00bcd4;
-}
-.copy-tag {
-    font-size: 14px;
-    color: #546e7a;
-    margin-top: 40px;
-    border-top: 1px solid #1c2a38;
-    padding-top: 20px;
-}
-
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-    .brand-container .logo-main-text {
-        font-size: 48px; 
-    }
-    .brand-container .logo-mechanical-text {
-        font-size: 16px;
-        margin-top: 8px;
-    }
-    .hero-subheading {
-        font-size: 18px;
-        letter-spacing: 3px;
-    }
-    .justified-lead {
-        font-size: 18px;
-    }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .form-container {
-        padding: 25px;
-    }
+    .hero { min-height: 75vh; padding: 20px 15px; }
+    .hero-logo-img { max-width: 320px; }
+    .hero-subheading { font-size: 18px; letter-spacing: 3px; }
+    .justified-lead { font-size: 18px; }
+    .form-row { flex-direction: column; gap: 0; }
+    .form-container { padding: 25px; }
 }
