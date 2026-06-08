@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
-    
-    <!-- THE SECURE SOFACHROME ENGINE LINK -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Oswald:wght@500&family=Rowdies:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Links to your external stylesheet -->
+    <!-- Links straight to your lowercase stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Local SEO Target Data -->
+    <!-- Local SEO Target Metrics -->
     <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
     <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia">
 </head>
@@ -22,7 +15,10 @@
     <!-- Header & Navigation Bar -->
     <header>
         <div class="nav-container">
-            <div class="nav-logo-text">REFCO</div>
+            <!-- Sharp self-contained vector header logo -->
+            <svg viewBox="0 0 160 40" width="120" height="30" style="overflow: visible;">
+                <text x="0" y="30" font-family="'Arial Black', Gadget, sans-serif" font-size="28" font-weight="900" font-style="italic" fill="#ffffff" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
+            </svg>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -33,13 +29,25 @@
         </div>
     </header>
 
-    <!-- Main Hero Presentation Section -->
+    <!-- Main Hero Presentation Area -->
     <section id="home" class="hero">
         
-        <!-- Pure Text Branding Structure calling the exact Sofachrome layout parameters -->
-        <div class="brand-container">
-            <div class="logo-main-text">REFCO</div>
-            <div class="logo-mechanical-text">MECHANICAL INC</div>
+        <!-- PURE VECTOR BRANDING BANNER: Draws the exact flat-topped, curved-swoop text using mathematical paths -->
+        <div class="vector-brand-wrapper">
+            <svg viewBox="0 0 800 220" width="100%" height="100%" style="overflow: visible;">
+                <!-- "REFCO" - Compressed vertically and stretched horizontally to lock in the exact squarish swoops -->
+                <text x="50%" y="95" font-family="'Arial Black', 'Impact', Gadget, sans-serif" font-size="110" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="780" lengthAdjust="spacingAndGlyphs">REFCO</text>
+                
+                <!-- Center Divider Accent Rule Line -->
+                <line x1="20" y1="125" x2="780" y2="125" stroke="#ffffff" stroke-width="5" />
+                
+                <!-- "MECHANICAL INC" - Proportional baseline tracking width -->
+                <text x="50%" y="175" font-family="'Arial Black', 'Impact', Gadget, sans-serif" font-size="36" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="720" lengthAdjust="spacingAndGlyphs">MECHANICAL INC</text>
+                
+                <!-- Bottom Detail Framing Marks -->
+                <line x1="260" y1="205" x2="360" y2="205" stroke="#ffffff" stroke-width="3" />
+                <line x1="440" y1="205" x2="540" y2="205" stroke="#ffffff" stroke-width="3" />
+            </svg>
         </div>
         
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
@@ -70,7 +78,7 @@
         </div>
     </section>
 
-    <!-- Interactive Estimate Request Form -->
+    <!-- Interactive Estimate Consultation Request Form -->
     <section class="form-section">
         <div class="form-container">
             <h3>Request an Estimate or Project Consult</h3>
@@ -98,7 +106,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label Conference for="message">Message / System Issues</label>
+                    <label for="message">Message / System Issues</label>
                     <textarea id="message" rows="4" required placeholder="Describe your mechanical installation or repair requirements..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit Request</button>
@@ -110,7 +118,9 @@
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
-                <div class="footer-logo-text">REFCO</div>
+                <svg viewBox="0 0 160 40" width="120" height="30" style="overflow: visible; margin-bottom: 15px;">
+                    <text x="50%" y="30" font-family="'Arial Black', Gadget, sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
+                </svg>
                 <p>Serving Halifax, Dartmouth, Bedford, and executing regional projects across Atlantic Canada.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
