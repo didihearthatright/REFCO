@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFCO Mechanical Inc | HVAC & Refrigeration</title>
-    <!-- Links to your external stylesheet -->
+    <!-- Links directly to your local stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- Local SEO Target Metrics -->
-    <meta name="description" content="REFCO Mechanical Inc provides commercial & residential HVAC, refrigeration, and mechanical piping solutions across Halifax, Dartmouth, and regional Atlantic Canada projects at scale.">
-    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Commercial Refrigeration Dartmouth, Mechanical Piping Nova Scotia">
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
+    <!-- Header Navigation Bar -->
     <header>
         <div class="nav-container">
-            <!-- Fully self-contained text branding vector (Immune to file asset blocks) -->
-            <svg class="nav-logo-svg" viewBox="0 0 160 40" width="120" height="30" style="overflow: visible;">
-                <text x="0" y="30" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="28" font-weight="900" font-style="italic" fill="#ffffff" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
-            </svg>
+            <div class="header-placeholder-space"></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -29,25 +23,13 @@
         </div>
     </header>
 
-    <!-- Main Hero Presentation Area -->
+    <!-- Main Presentation Section -->
     <section id="home" class="hero">
         
-        <!-- PURE VECTOR BRANDING BANNER: Zero images, zero boxes, perfectly wide geometric layout -->
-        <div class="vector-brand-wrapper">
-            <svg class="hero-logo-svg" viewBox="0 0 800 210" width="100%" height="100%" style="overflow: visible;">
-                <!-- "REFCO" - Slanted, heavy, forced wide corporate vector geometry -->
-                <text x="50%" y="90" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="105" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="760" lengthAdjust="spacingAndGlyphs">REFCO</text>
-                
-                <!-- Center Divider Accent Rule Line -->
-                <line x1="20" y1="120" x2="780" y2="120" stroke="#ffffff" stroke-width="5" />
-                
-                <!-- "MECHANICAL INC" - Proportional horizontal baseline layout width -->
-                <text x="50%" y="165" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="36" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="720" lengthAdjust="spacingAndGlyphs">MECHANICAL INC</text>
-                
-                <!-- Bottom Framing Detail Accent Marks -->
-                <line x1="260" y1="195" x2="360" y2="195" stroke="#ffffff" stroke-width="3" />
-                <line x1="440" y1="195" x2="540" y2="195" stroke="#ffffff" stroke-width="3" />
-            </svg>
+        <!-- PURE CODE BRANDING: No images, no background boxes, completely sharp -->
+        <div class="brand-container">
+            <div class="logo-main-text">REFCO</div>
+            <div class="logo-mechanical-text">MECHANICAL INC</div>
         </div>
         
         <h1 class="hero-subheading">HVAC & REFRIGERATION</h1>
@@ -58,69 +40,27 @@
 
     <!-- Core Specialties Block -->
     <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our Core Specialties</h2>
-            <p class="section-subtitle">Delivering elite local response times and managing high-capacity regional operations.</p>
-        </div>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Heating & Cooling</h3>
-                <p>Complete commercial HVAC installation, rapid emergency diagnostics, and custom preventative care packages designed for institutional systems.</p>
+                <p>Complete commercial HVAC installation, rapid emergency diagnostics, and custom preventative care packages.</p>
             </div>
             <div class="service-card">
                 <h3>Refrigeration</h3>
-                <p>Commercial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling system setups.</p>
+                <p>Industrial walk-in coolers, large-scale supermarket cold storage, industrial freezers, and heavy duty process cooling.</p>
             </div>
             <div class="service-card">
                 <h3>Mechanical Services</h3>
-                <p>High-pressure mechanical piping systems, industrial equipment ventilation, custom plant retrofits, and large-scale mechanical design operations.</p>
+                <p>High-pressure mechanical piping systems, industrial equipment ventilation, and custom plant retrofits.</p>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Estimate Consultation Request Form -->
-    <section class="form-section">
-        <div class="form-container">
-            <h3>Request an Estimate or Project Consult</h3>
-            <p>Fill out the details below to connect directly with our dispatch team.</p>
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry received! This form is fully functional and ready.');">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" required placeholder="(902) 555-5555">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="name@company.com">
-                </div>
-                <div class="form-group">
-                    <label for="scope">Project Scope / Location</label>
-                    <select id="scope">
-                        <option value="local">Local Service Call (Halifax / HRM)</option>
-                        <option value="regional">Regional Tender / Large-Scale Commercial Contract</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message / System Issues</label>
-                    <textarea id="message" rows="4" required placeholder="Describe your mechanical installation or repair requirements..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit Request</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer Information Section -->
+    <!-- Footer Information -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
-                <svg viewBox="0 0 160 40" width="120" height="30" style="overflow: visible; margin-bottom: 15px;">
-                    <text x="50%" y="30" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="26" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" textLength="160" lengthAdjust="spacingAndGlyphs">REFCO</text>
-                </svg>
+                <div class="footer-logo-text">REFCO</div>
                 <p>Serving Halifax, Dartmouth, Bedford, and executing regional projects across Atlantic Canada.</p>
                 <a href="tel:9028807483" class="phone-link">902-880-7483</a>
                 <p>Email: contact@refcomechanical.com</p>
