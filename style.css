@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 body {
-    color: #1c2431;
+    color: #ffffff;
     line-height: 1.6;
-    background-color: #f7f9fa;
+    background-color: #08111e; /* Deep dark background matching your logo artwork shade */
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 a {
@@ -17,7 +17,7 @@ a {
 
 /* Header Elements & Navigation Layout */
 header {
-    background-color: #08111e;
+    background-color: #040a12;
     color: #ffffff;
     position: sticky;
     top: 0;
@@ -30,7 +30,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
+}
+.header-placeholder-space {
+    width: 40px;
+    height: 40px;
 }
 nav ul {
     display: flex;
@@ -42,34 +46,35 @@ nav ul li {
 nav ul li a {
     font-weight: 600;
     font-size: 16px;
+    color: #b0bec5;
     transition: color 0.3s;
 }
 nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* Hero Frame with Anchored Town Clock Image */
+/* Main Top Frame: Stripped of background image to blend natively with logo.png */
 .hero {
-    background: linear-gradient(rgba(8, 17, 30, 0.75), rgba(8, 17, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    color: #ffffff;
-    min-height: 90vh;
+    background-color: #08111e;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* Vector Branding Layout Box Container */
-.vector-brand-wrapper {
-    max-width: 680px;
-    width: 100%;
+/* Formats and centers your original corporate logo image file */
+.hero-logo-img {
+    max-width: 640px;
+    width: 90%;
+    height: auto;
     margin-bottom: 25px;
+    object-fit: contain;
 }
 
-/* "HVAC & REFRIGERATION" subtitle and white rule line */
+/* "HVAC & REFRIGERATION" clean modern subtitle layout */
 .hero-subheading {
     font-size: 26px;
     font-weight: 600;
@@ -77,11 +82,10 @@ nav ul li a:hover {
     text-transform: uppercase;
     margin-bottom: 25px;
     color: #ffffff;
-    border-top: 3px solid #ffffff; 
-    padding-top: 15px;
-    display: inline-block;
     width: 100%;
     max-width: 650px;
+    border-top: 3px solid #ffffff;
+    padding-top: 20px;
 }
 
 .justified-lead {
@@ -113,23 +117,8 @@ nav ul li a:hover {
 /* Specialties Presentation Frame */
 .services {
     max-width: 1200px;
-    margin: 80px auto 40px auto;
+    margin: 60px auto;
     padding: 0 20px;
-}
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.services h2 {
-    font-size: 36px;
-    color: #08111e;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.section-subtitle {
-    font-size: 18px;
-    color: #546e7a;
-    margin-top: 5px;
 }
 .services-grid {
     display: grid;
@@ -137,98 +126,27 @@ nav ul li a:hover {
     gap: 40px;
 }
 .service-card {
-    background: #ffffff;
+    background: #101c2e;
     padding: 50px 30px;
     border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-bottom: 4px solid #08111e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-bottom: 4px solid #040a12;
     transition: all 0.3s;
-}
-.service-card:hover {
-    transform: translateY(-8px);
-    border-bottom-color: #00bcd4;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    color: #ffffff;
 }
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #08111e;
+    color: #00bcd4;
     text-transform: uppercase;
 }
-
-/* Interactive Request Form Frame */
-.form-section {
-    background-color: #f0f4f8;
-    padding: 80px 20px;
-}
-.form-container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-.form-container h3 {
-    font-size: 28px;
-    color: #08111e;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-.form-container p {
-    color: #546e7a;
-    margin-bottom: 25px;
-}
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #08111e;
-    font-size: 14px;
-}
-.form-group input, .form-group select, .form-group textarea {
-    padding: 12px;
-    border: 1px solid #cfd8dc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #1c2431;
-    background-color: #fafbfc;
-}
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #00bcd4;
-    background-color: #ffffff;
-}
-.submit-btn {
-    width: 100%;
-    background-color: #08111e;
-    color: #ffffff;
-    padding: 14px;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.submit-btn:hover {
-    background-color: #00bcd4;
+.service-card p {
+    color: #b0bec5;
 }
 
 /* Base Footer Configurations */
 footer {
-    background-color: #08111e;
+    background-color: #040a12;
     color: #ffffff;
     padding: 60px 20px 30px 20px;
     text-align: center;
@@ -245,14 +163,14 @@ footer {
 .phone-link {
     display: inline-block;
     font-size: 34px;
-    color: #ffffff;
+    color: #00bcd4;
     margin: 20px 0;
     font-weight: 700;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
 .phone-link:hover {
-    color: #00bcd4;
+    color: #ffffff;
 }
 .copy-tag {
     font-size: 14px;
@@ -262,12 +180,86 @@ footer {
     padding-top: 20px;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-    .hero { min-height: 75vh; padding: 20px 15px; }
-    .vector-brand-wrapper { max-width: 320px; }
+    .hero { min-height: 60vh; padding: 40px 15px; }
+    .hero-logo-img { max-width: 320px; }
     .hero-subheading { font-size: 18px; letter-spacing: 3px; }
     .justified-lead { font-size: 18px; }
-    .form-row { flex-direction: column; gap: 0; }
-    .form-container { padding: 25px; }
 }
+
+/* ==========================================================================
+   SERVICES CONTAINER SPLIT LAYOUT RULES
+   ========================================================================== */
+.services-page-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.services-header-block {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.services-header-block h1 {
+    font-size: 38px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.services-header-block p {
+    font-size: 18px;
+    color: #b0bec5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.services-columns-split {
+    display: flex;
+    gap: 40px;
+}
+.service-division-card {
+    flex: 1;
+    background-color: #0d1520; /* Darker subtle card background to lift it off the page */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 5px solid #ffffff; /* Clean white top-border for the residential block */
+}
+.commercial-highlight {
+    border-top-color: #00bcd4; /* Elite bright accent color for the commercial block */
+}
+.service-division-card h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1c2a38;
+    padding-bottom: 10px;
+}
+.division-intro {
+    font-size: 15px;
+    color: #00bcd4;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+.bullet-feature-item {
+    margin-bottom: 25px;
+}
+.bullet-feature-item strong {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+.bullet-feature-item p {
+    color: #cfd8dc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Responsive breakpoint to automatically stack columns cleanly on small phone screens */
+@media (max-width: 900px) {
+    .services-columns-split { flex-direction: column; gap: 30px; }
+    .services-header-block h1 { font-size: 30px; }
+    .service-division-card { padding: 25px; }
+}
+
