@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     background-color: #070608;
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-rendering: optimizeLegibility;
 }
 a {
     text-decoration: none;
@@ -17,7 +18,7 @@ a {
 
 /* Header Elements & Navigation Layout */
 header {
-    background-color: #05101e; /* Dark navy header tracking with the new brand color spectrum */
+    background-color: #05101e;
     color: #ffffff;
     position: sticky;
     top: 0;
@@ -53,11 +54,7 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
-/* 
-   THE NEW BRAND CANVASES FRAME:
-   Blends the city background image with a deep corporate navy tint overlay.
-   This frames the solid white bordered rectangular logo perfectly.
-*/
+/* The Halifax Hero Canvas Section */
 .hero {
     background: linear-gradient(rgba(5, 16, 30, 0.8), rgba(5, 16, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center/cover;
     background-attachment: fixed;
@@ -70,18 +67,14 @@ nav ul li a:hover {
     padding: 60px 20px;
 }
 
-/* 
-   SOLID BOX LOGO FORMATTING:
-   Natively renders the solid rectangle exactly how it was designed.
-   Adds a subtle shadow to lift the box off the background image.
-*/
+/* Solid Box Logo Formatting */
 .hero-logo-img {
     max-width: 680px;
     width: 95%;
     height: auto;
     margin-bottom: 30px;
     object-fit: contain;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Subtle dark shadow border around the logo box */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* "HVAC & REFRIGERATION" clean modern subtitle layout */
@@ -96,16 +89,19 @@ nav ul li a:hover {
     max-width: 650px;
     border-top: 3px solid #ffffff;
     padding-top: 20px;
+    text-wrap: balance; /* Automatically balances line endings */
 }
 
+/* FIXED HOMEPAGE LEAD TEXT: Width optimized to completely eliminate orphan words */
 .justified-lead {
     font-size: 21px;
     margin-bottom: 40px;
-    max-width: 620px;
+    max-width: 660px; /* Widened slightly to let the trailing text anchor smoothly */
     font-weight: 300;
     color: #cfd8dc;
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
+    line-height: 1.7;
+    text-wrap: pretty; /* Instructs browsers to structurally avoid orphans */
 }
 .btn {
     display: inline-block;
@@ -124,7 +120,7 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Specialties Presentation Frame */
+/* Homepage Specialties Presentation Frame */
 .services {
     max-width: 1200px;
     margin: 80px auto;
@@ -136,7 +132,7 @@ nav ul li a:hover {
     gap: 40px;
 }
 .service-card {
-    background: #0f1824; /* Deep corporate navy card matching the brand profile */
+    background: #0f1824;
     padding: 50px 30px;
     border-radius: 6px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
@@ -152,6 +148,7 @@ nav ul li a:hover {
 }
 .service-card p {
     color: #b0bec5;
+    text-wrap: pretty;
 }
 
 /* Base Footer Configurations */
@@ -190,7 +187,7 @@ footer {
     padding-top: 20px;
 }
 
-/* SERVICES CONTAINER SPLIT LAYOUT RULES */
+/* SERVICES SUBPAGE CONTAINER SPLIT LAYOUT RULES */
 .services-page-container {
     max-width: 1200px;
     margin: 50px auto;
@@ -206,12 +203,7 @@ footer {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-.services-header-block p {
-    font-size: 18px;
-    color: #b0bec5;
-    max-width: 800px;
-    margin: 0 auto;
+    text-wrap: balance;
 }
 .services-columns-split {
     display: flex;
@@ -255,6 +247,7 @@ footer {
     color: #cfd8dc;
     font-size: 15px;
     line-height: 1.5;
+    text-wrap: pretty; /* Forces subpage bullet columns to drop entire word fragments together */
 }
 
 /* Smartphone responsive breakpoints */
@@ -267,5 +260,5 @@ footer {
     .hero { min-height: 60vh; padding: 40px 15px; background-attachment: scroll; }
     .hero-logo-img { max-width: 340px; }
     .hero-subheading { font-size: 18px; letter-spacing: 3px; }
-    .justified-lead { font-size: 18px; }
+    .justified-lead { font-size: 18px; max-width: 100%; }
 }
