@@ -1,5 +1,163 @@
 /* ==========================================================================
-   SECURE INQUIRY FORM GRID AND BOX STYLING CONFIGURATIONS
+   GLOBAL RESET AND BASE THEME RULES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #ffffff;
+    line-height: 1.6;
+    background-color: #070608;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION FIXED BAR
+   ========================================================================== */
+header {
+    background-color: #05101e;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.header-placeholder-space {
+    width: 40px;
+    height: 40px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    font-weight: 600;
+    font-size: 16px;
+    color: #b0bec5;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* ==========================================================================
+   HERO DISPLAY FRAME WITH HALIFAX TINT
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(5, 16, 30, 0.8), rgba(5, 16, 30, 0.85)), url('halifaxbg1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* SOLID RECTANGULAR BOX LOGO BOUNDS */
+.hero-logo-img {
+    max-width: 680px;
+    width: 95%;
+    height: auto;
+    margin-bottom: 30px;
+    object-fit: contain;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero-subheading {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    border-top: 3px solid #ffffff;
+    padding-top: 20px;
+    text-wrap: balance;
+}
+.justified-lead {
+    font-size: 21px;
+    margin-bottom: 40px;
+    max-width: 660px;
+    font-weight: 300;
+    color: #cfd8dc;
+    text-align: center;
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #05101e;
+    padding: 14px 35px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.btn:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   HOMEPAGE SPECIALTIES PRESENTATION CARD GRID
+   ========================================================================== */
+.services {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.service-card {
+    background: #0f1824;
+    padding: 50px 30px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border-bottom: 4px solid #05101e;
+    transition: all 0.3s;
+    color: #ffffff;
+}
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00bcd4;
+    text-transform: uppercase;
+}
+.service-card p {
+    color: #b0bec5;
+    text-wrap: pretty;
+}
+
+/* ==========================================================================
+   INTERACTIVE INQUIRY ESTIMATE FORM CONTAINER
    ========================================================================== */
 .form-section {
     max-width: 1200px;
@@ -9,11 +167,12 @@
 .form-container {
     max-width: 700px;
     margin: 0 auto;
-    background-color: #0f1824; /* Matching your dark corporate navy theme */
+    background-color: #0f1824;
     padding: 45px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     border: 1px solid #102136;
+    text-align: left;
 }
 .form-container h3 {
     font-size: 26px;
@@ -39,7 +198,7 @@
     margin-bottom: 20px;
 }
 .form-row .form-group {
-    margin-bottom: 0; /* Clear margins inside the split row grid */
+    margin-bottom: 0;
 }
 .form-group label {
     font-size: 14px;
@@ -54,7 +213,7 @@
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
-    background-color: #070e17; /* Deep dark fill inside the input fields */
+    background-color: #070e17;
     border: 1px solid #1a2f4c;
     border-radius: 4px;
     color: #ffffff;
@@ -66,12 +225,12 @@
 .form-group select:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: #00bcd4; /* Accent blue glow effect when clicked */
+    border-color: #00bcd4;
     box-shadow: 0 0 8px rgba(0, 188, 212, 0.2);
 }
 .form-group input::placeholder, 
 .form-group textarea::placeholder {
-    color: #4f6a8a; /* Soft, highly legible placeholder text tracking */
+    color: #4f6a8a;
 }
 .form-group select {
     appearance: none;
@@ -104,8 +263,123 @@
     box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
 }
 
-/* Smart stacking configurations for compact smartphone layout screens */
-@media (max-width: 600px) {
+/* ==========================================================================
+   SERVICES SUBPAGE CONTAINER SPLIT LAYOUT RULES
+   ========================================================================== */
+.services-page-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.services-header-block {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.services-header-block h1 {
+    font-size: 38px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-wrap: balance;
+}
+.services-columns-split {
+    display: flex;
+    gap: 40px;
+}
+.service-division-card {
+    flex: 1;
+    background-color: #0f1824;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 5px solid #ffffff;
+}
+.commercial-highlight {
+    border-top-color: #00bcd4;
+}
+.service-division-card h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #102136;
+    padding-bottom: 10px;
+}
+.division-intro {
+    font-size: 15px;
+    color: #00bcd4;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+.bullet-feature-item {
+    margin-bottom: 25px;
+    text-align: left;
+}
+.bullet-feature-item strong {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+.bullet-feature-item p {
+    color: #cfd8dc;
+    font-size: 15px;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+/* ==========================================================================
+   FOOTER BASE CONFIGURATIONS
+   ========================================================================== */
+footer {
+    background-color: #05101e;
+    color: #ffffff;
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-info p {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #b0bec5;
+}
+.phone-link {
+    display: inline-block;
+    font-size: 34px;
+    color: #00bcd4;
+    margin: 20px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.phone-link:hover {
+    color: #ffffff;
+}
+.copy-tag {
+    font-size: 14px;
+    color: #546e7a;
+    margin-top: 40px;
+    border-top: 1px solid #102136;
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE VIEWPORT LAYOUT BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 900px) {
+    .services-columns-split { flex-direction: column; gap: 30px; }
+    .services-header-block h1 { font-size: 30px; }
+    .service-division-card { padding: 25px; }
+}
+@media (max-width: 768px) {
+    .hero { min-height: 60vh; padding: 40px 15px; background-attachment: scroll; }
+    .hero-logo-img { max-width: 340px; }
+    .hero-subheading { font-size: 18px; letter-spacing: 3px; }
+    .justified-lead { font-size: 18px; max-width: 100%; }
     .form-row { flex-direction: column; gap: 20px; }
     .form-container { padding: 25px 20px; }
 }
