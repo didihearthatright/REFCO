@@ -123,6 +123,20 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* JOURNEYMAN ACCENT BADGE */
+.badge-journeyman {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #05101e;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
 /* ==========================================================================
    HOMEPAGE SPECIALTIES PRESENTATION CARD GRID
    ========================================================================== */
@@ -337,49 +351,45 @@ footer {
     color: #ffffff;
     padding: 60px 20px 30px 20px;
     text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid #102136;
 }
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
-.footer-info p {
-    margin: 8px 0;
-    font-size: 18px;
+.footer-info {
     color: #b0bec5;
-}
-.phone-link {
-    display: inline-block;
-    font-size: 34px;
-    color: #00bcd4;
-    margin: 20px 0;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-.phone-link:hover {
-    color: #ffffff;
-}
-.copy-tag {
     font-size: 14px;
-    color: #546e7a;
-    margin-top: 40px;
-    border-top: 1px solid #102136;
-    padding-top: 20px;
 }
 
 /* ==========================================================================
-   RESPONSIVE MOBILE VIEWPORT LAYOUT BREAKPOINTS
+   RESPONSIVE DESIGN RESPONSES (MOBILE OPTIMIZATION)
    ========================================================================== */
-@media (max-width: 900px) {
-    .services-columns-split { flex-direction: column; gap: 30px; }
-    .services-header-block h1 { font-size: 30px; }
-    .service-division-card { padding: 25px; }
-}
 @media (max-width: 768px) {
-    .hero { min-height: 60vh; padding: 40px 15px; background-attachment: scroll; }
-    .hero-logo-img { max-width: 340px; }
-    .hero-subheading { font-size: 18px; letter-spacing: 3px; }
-    .justified-lead { font-size: 18px; max-width: 100%; }
-    .form-row { flex-direction: column; gap: 20px; }
-    .form-container { padding: 25px 20px; }
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .services-columns-split {
+        flex-direction: column;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .hero-subheading {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .justified-lead {
+        font-size: 17px;
+    }
 }
