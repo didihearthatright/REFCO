@@ -36,8 +36,8 @@
         
         <p class="justified-lead">Professional, reliable heating and cooling solutions serving homeowners and commercial clients throughout Halifax and the surrounding HRM.</p>
         
-        <!-- Prominent Company Promise Statement -->
-        <h2 style="font-size: 28px; font-weight: 800; color: #00bcd4; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px;">WE SERVICE WHAT WE SELL</h2>
+        <!-- Prominent Company Promise Statement - Matches HVAC SOLUTIONS styling perfectly -->
+        <h2 class="hero-subheading" style="border-top: none; padding-top: 0; margin-top: 10px; margin-bottom: 0;">WE SERVICE WHAT WE SELL</h2>
     </section>
 
     <!-- Streamlined Local Specialties Grid -->
@@ -67,7 +67,7 @@
             <h3>Request an Estimate or Consult</h3>
             <p>Fill out the details below to connect directly with our service dispatch team.</p>
             
-            <!-- SECURE GATEWAY ROUTING INTERACTION LAYER: Activated with Jordan's exact secure token keys -->
+            <!-- SECURE GATEWAY ROUTING INTERACTION LAYER: Wired directly to Jordan's live business email -->
             <form action="https://formsubmit.co" method="POST">
                 
                 <!-- Anti-Spam Bot Filter Protection Hook -->
@@ -112,12 +112,31 @@
             <div class="footer-info">
                 <p>Serving HRM and surrounding areas.</p>
                 <!-- Tappable links for direct calling and emailing functionality -->
-                <p style="margin: 8px 0;"><a href="tel:9028807483" class="phone-link" style="font-weight: bold; font-size: 18px; color: #00bcd4; transition: opacity 0.2s;">902-880-7483</a></p>
-                <p style="margin-bottom: 15px;"><a href="mailto:jordan@refcomechanical.ca" class="email-link" style="color: #b0bec5; text-decoration: underline; transition: color 0.2s;">jordan@refcomechanical.ca</a></p>
+                <p style="margin: 8px 0;">
+                    <a href="tel:9028807483" id="desktop-phone-handler" class="phone-link" style="font-weight: bold; font-size: 18px; color: #FFBF00; transition: opacity 0.2s;">902-880-7483</a>
+                </p>
+                <p style="margin-bottom: 15px;">
+                    <a href="mailto:jordan@refcomechanical.ca?subject=Inquiry%20from%20Website" class="email-link" style="color: #b0bec5; text-decoration: underline; transition: color 0.2s;">jordan@refcomechanical.ca</a>
+                </p>
             </div>
             <div class="copy-tag">&copy; 2026 REFCO Mechanical Inc. All Rights Reserved.</div>
         </div>
     </footer>
+
+    <!-- INTELLIGENT DEVICE INTERCEPTION LAYER -->
+    <script>
+        document.getElementById('desktop-phone-handler').addEventListener('click', function(event) {
+            // Check if user is on a desktop computer using modern touch-point capability check
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 0);
+            
+            if (!isMobile) {
+                // Stop the browser from trying to launch an external calling app on PC/Mac
+                event.preventDefault();
+                // Display a clear notification box with the number natively
+                alert("REFCO Mechanical Inc.\nPhone Number: 902-880-7483");
+            }
+        });
+    </script>
 
 </body>
 </html>
