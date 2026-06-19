@@ -162,7 +162,7 @@ nav ul li a:hover {
 .service-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #FFBF00; /* UPDATED FROM BLUE TO PREMIUM GOLD */
+    color: #FFBF00;
     text-transform: uppercase;
 }
 .service-card p {
@@ -344,7 +344,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   FOOTER BASE CONFIGURATIONS
+   FOOTER BASE CONFIGURATIONS WITH HYPERLINK BLUE
    ========================================================================== */
 footer {
     background-color: #05101e;
@@ -365,6 +365,15 @@ footer {
 .footer-info {
     color: #b0bec5;
     font-size: 14px;
+}
+/* SPECIFIC INTERACTIVE BLUE FOOTER LINKS */
+.phone-link, .email-link {
+    color: #3b82f6 !important; /* CLASSIC TRUSTED LINK BLUE */
+    text-decoration: underline !important;
+}
+.phone-link:hover, .email-link:hover {
+    color: #60a5fa !important; /* LIGHTER BLUE HIGHLIGHT ON HOVER */
+    opacity: 0.8;
 }
 
 /* ==========================================================================
