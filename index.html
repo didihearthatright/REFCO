@@ -3,109 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REFCO Mechanical Inc. | HVAC & Refrigeration Halifax</title>
+    <title>REFCO Mechanical Inc | HVAC Solutions</title>
+    <!-- Links directly to your local lowercase stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Local SEO Target Parameters -->
+    <meta name="description" content="REFCO Mechanical Inc provides professional residential & commercial HVAC installation, mini-split deep cleaning, and preventative system maintenance solutions across Halifax and the HRM.">
+    <meta name="keywords" content="REFCO Mechanical, HVAC Halifax, Heat Pump Service Dartmouth, Mini Split Cleaning Nova Scotia">
 </head>
 <body>
+
+    <!-- Header & Navigation Bar -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="logo.png" alt="REFCO Mechanical Inc. Logo" class="logo-img">
-            </div>
+        <div class="nav-container" style="justify-content: center; padding: 10px 20px;">
             <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#contact" class="btn-nav">Contact</a></li>
+                <ul style="display: flex; list-style: none;">
+                    <!-- Links temporarily hidden for single-page streamlined launch -->
+                    <!-- <li><a href="index.html">Home</a></li> -->
+                    <!-- <li><a href="services.html">Services</a></li> -->
+                    <!-- <li><a href="about.html">About</a></li> -->
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background-image: linear-gradient(rgba(10, 34, 64, 0.85), rgba(10, 34, 64, 0.85)), url('halifaxbg1.jpg');">
-        <div class="container hero-container">
-            <h1>Reliable HVAC & Refrigeration Services in Halifax</h1>
-            <p>Commercial and residential heating, cooling, and ventilation solutions tailored to your needs. Available 24/7 for emergencies.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request an Estimate</a>
-                <a href="tel:9028807483" class="btn btn-secondary">Call 902-880-7483</a>
+    <!-- Main Hero Presentation Section -->
+    <section id="home" class="hero">
+        
+        <!-- Direct Image Loader: Renders the new gear logo box cleanly -->
+        <img src="logo.png" alt="REFCO Mechanical Inc Logo" class="hero-logo-img">
+        
+        <h1 class="hero-subheading">HVAC SOLUTIONS</h1>
+        
+        <p class="justified-lead">Professional, reliable heating and cooling solutions serving homeowners and commercial clients throughout Halifax and the surrounding HRM.</p>
+        
+        <!-- Prominent Company Promise Statement - Matches HVAC SOLUTIONS styling perfectly -->
+        <h2 class="hero-subheading" style="border-top: none; padding-top: 0; margin-top: 10px; margin-bottom: 0;">WE SERVICE WHAT WE SELL</h2>
+    </section>
+
+    <!-- Streamlined Local Specialties Grid -->
+    <section id="services-summary" class="services">
+        <div class="services-grid">
+            <!-- Block 1: Commercial -->
+            <div class="service-card">
+                <h3>Commercial Air Conditioning & Heating</h3>
+                <p>Rooftop units, package systems, and split systems.</p>
+            </div>
+            <!-- Block 2: Residential -->
+            <div class="service-card">
+                <h3>Residential</h3>
+                <p>Heat pump and air conditioning installations of ducted and ductless mini-split systems.</p>
+            </div>
+            <!-- Block 3: Maintenance -->
+            <div class="service-card">
+                <h3>Maintenance</h3>
+                <p>Offering annual and bi-annual maintenance packages, and deep hydro cleanings for mini-splits.</p>
             </div>
         </div>
     </section>
 
-    <section class="services-preview">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Commercial Refrigeration</h3>
-                    <p>Walk-in coolers, freezers, ice machines, and display cases kept at perfect temperatures.</p>
-                    <a href="services.html#refrigeration" class="read-more">Learn More &rarr;</a>
-                </div>
-                <div class="service-card">
-                    <h3>Heating & Cooling</h3>
-                    <p>Heat pump installation, furnace repair, AC servicing, and custom ventilation layout designs.</p>
-                    <a href="services.html#hvac" class="read-more">Learn More &rarr;</a>
-                </div>
-                <div class="service-card">
-                    <h3>Preventative Maintenance</h3>
-                    <p>Scheduled tune-ups to extend equipment lifespan, maximize efficiency, and prevent breakdowns.</p>
-                    <a href="services.html#maintenance" class="read-more">Learn More &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container contact-container">
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-                <p>Have an issue or need an installation estimate? Contact REFCO Mechanical today for fast, professional service across the HRM.</p>
-                <div class="info-item">
-                    <strong>Phone:</strong> <a href="tel:9028807483">902-880-7483</a>
-                </div>
-                <div class="info-item">
-                    <strong>Email:</strong> <a href="mailto:jordan@refcomechanical.ca">jordan@refcomechanical.ca</a>
-                </div>
-                <div class="info-item">
-                    <strong>Hours:</strong> Mon - Fri: 8:00 AM - 5:00 PM<br><span class="emergency">24/7 Emergency Service Available</span>
-                </div>
-            </div>
-            <div class="contact-form-container">
-                <h3>Request an Estimate or Consult</h3>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="9445e18a-2e1d-4fce-b0cd-a37fb064e409">
+    <!-- INTERACTIVE ESTIMATE CONSULTATION SECURE REQUEST FORM -->
+    <section class="form-section">
+        <div class="form-container">
+            <h3>Request an Estimate or Consult</h3>
+            <p>Fill out the details below to connect directly with our service dispatch team.</p>
+            
+            <!-- SECURE GATEWAY ROUTING INTERACTION LAYER: Wired directly to Jordan's live business email -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="9445e18a-2e1d-4fce-b0cd-a37fb064e409">
+                <!-- Anti-Spam Bot Filter Protection Hook -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Custom Redirect Confirmation Page Configuration -->
+                <input type="hidden" name="_next" value="https://github.io">
+                
+                <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(902) 000-0000">
+                        <input type="tel" id="phone" name="phone" required placeholder="(902) 555-5555">
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message / Project Details</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Describe what you need..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit">Submit Request</button>
-                </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="scope">Project Scope / Location</label>
+                    <select id="scope" name="scope">
+                        <option value="Residential Service">Residential Service / Installation Call</option>
+                        <option value="Commercial Contract">Commercial Systems / Maintenance Consult</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / System Requirements</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe your heating, cooling, or ventilation requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Secure Request</button>
+            </form>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-container">
-            <p>&copy; 2026 REFCO Mechanical Inc. All rights reserved.</p>
-            <p>Proudly serving Halifax, Dartmouth, Bedford, and surrounding areas.</p>
+    <!-- Footer Information Section -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p style="margin-bottom: 5px;">Serving HRM and surrounding areas.</p>
+                <!-- Tappable links for direct calling and emailing functionality with matched fonts and sizing -->
+                <p style="margin: 8px 0;">
+                    <a href="tel:9028807483" id="desktop-phone-handler" class="phone-link" style="font-weight: bold; font-size: 18px; transition: opacity 0.2s;">902-880-7483</a>
+                </p>
+                <p style="margin: 8px 0 20px 0;">
+                    <a href="mailto:jordan@refcomechanical.ca?subject=Inquiry%20from%20Website" class="email-link" style="font-weight: bold; font-size: 18px; transition: opacity 0.2s;">jordan@refcomechanical.ca</a>
+                </p>
+            </div>
+            <div class="copy-tag">&copy; 2026 REFCO Mechanical Inc. All Rights Reserved.</div>
         </div>
     </footer>
+
+    <!-- INTELLIGENT DEVICE INTERCEPTION LAYER -->
+    <script>
+        document.getElementById('desktop-phone-handler').addEventListener('click', function(event) {
+            // Check if user is on a desktop computer using modern touch-point capability check
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 0);
+            
+            if (!isMobile) {
+                // Stop the browser from trying to launch an external calling app on PC/Mac
+                event.preventDefault();
+                // Display a clear notification box with the number natively
+                alert("REFCO Mechanical Inc.\nPhone Number: 902-880-7483");
+            }
+        });
+    </script>
+
 </body>
 </html>
