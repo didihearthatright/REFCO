@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Received | REFCO Mechanical Inc</title>
+    <!-- Seamless link directly to your central stylesheet rules -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s),
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://googletagmanager.com;
+    'https://googleletagmanager.com;
     })(window,document,'script','dataLayer','GTM-PB8CDBGG');</script>
     <!-- End Google Tag Manager -->
 
@@ -29,7 +30,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header & Navigation Bar -->
+    <!-- Header & Navigation Bar (Matches Index, Services, and About) -->
     <header>
         <div class="nav-container">
             <div class="header-placeholder-space"></div>
@@ -43,17 +44,31 @@
         </div>
     </header>
 
-    <!-- Success Message Presentation Layout -->
-    <main class="services-page-container" style="text-align: center; padding: 80px 20px;">
-        <div class="form-container" style="max-width: 600px; margin: 0 auto;">
-            <h1 style="font-size: 2.5rem; color: #1a252f; margin-bottom: 20px;">Thank You!</h1>
-            <p style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 15px; font-weight: 600;">Your service request has been securely submitted.</p>
-            <p style="color: #7f8c8d; margin-bottom: 35px;">Jordan or a member of our service dispatch team will review your system requirements and get back to you shortly.</p>
-            <a href="index.html" class="btn" style="box-shadow: none;">Return Home</a>
+    <!-- Success Message Presentation Layout (Leverages Master CSS Classes) -->
+    <main class="services-page-container">
+        
+        <div class="services-header-block">
+            <h1>Thank You!</h1>
+            <p>Your service request has been securely submitted to our team.</p>
         </div>
+
+        <div style="max-width: 600px; margin: 0 auto;">
+            <!-- Utilizes your verified service card visual structure -->
+            <div class="service-card" style="text-align: center; border-bottom: 4px solid #3498db;">
+                <p style="font-size: 1.15rem; color: #2c3e50; margin-bottom: 15px; font-weight: 600;">
+                    Jordan or a member of our service dispatch team will review your system requirements and get back to you shortly.
+                </p>
+                <p style="color: #57606f; margin-bottom: 30px; font-size: 0.95rem;">
+                    If this is an urgent residential mechanical disruption, please contact us directly via our direct phone dispatch link below.
+                </p>
+                <!-- Uses your Fire Red Heating Accent button style perfectly -->
+                <a href="index.html" class="btn">Return to Homepage</a>
+            </div>
+        </div>
+
     </main>
 
-    <!-- Footer Information Section -->
+    <!-- Footer Information Section: Identical to the main layout -->
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-info">
